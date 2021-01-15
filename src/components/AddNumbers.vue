@@ -12,7 +12,8 @@
 </template>
 
 <script>
-import {EventBus} from '../EventBus.js' // 引入EventBus實體
+// import {EventBus} from '../EventBus.js' // 引入EventBus實體
+import { store } from '../store.js'
 
 export default {
   data() {
@@ -22,9 +23,14 @@ export default {
   },
   methods: {
     addNumber() {
-      console.log(this.number)
-      EventBus.$emit('addNumber',parseInt(this.number))
+      store.addNumber(this.number)
     }
   }
+  // methods: {
+  //   addNumber() {
+  //     console.log(this.number)
+  //     EventBus.$emit('addNumber',parseInt(this.number))
+  //   }
+  // }
 }
 </script>

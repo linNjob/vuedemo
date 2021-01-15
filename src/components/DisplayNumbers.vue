@@ -5,7 +5,6 @@
 </template>
 
 <script>
-// import {EventBus} from '../EventBus.js'
 import { store } from '../store.js'
 
 export default {
@@ -15,14 +14,9 @@ export default {
     }
   },
   methods: {
-    handleAddNumber() {
-      // EventBus.$on('addNumber',(payload)=>{
-      //   this.numbers.push(payload)
-      // })
-    }
+
   },
   created() {
-    this.handleAddNumber(); // 在建立時就開始監聽
     console.log(store);
   },
 }
